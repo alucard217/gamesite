@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title> Street Fighter </title>
+    <link rel="icon" href="Images/logoFavicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <head>
+        <meta charset="UTF-8">
+        <h1 align="center" class="mainText">༻ Street Fighter ༺</h1>
+        <hr class="goth">
+        <div class="container-fluid">
+            <nav class="navbar-collapse">
+                <a class="nav-item" href="Registration.html">Registration</a> 
+                <a class="nav-item" href="">Authorisation</a>  
+                <a class="nav-item" href="AboutUs.html">About us</a> 
+            </nav>
+        </div>
+        <hr class="nongoth">
+    </head>
+        
+<body>
+        <div class="container" id="ContentList">
+        <h3 align="left"> Content: </h3> 
+            <div id="ContentRow" class="row">
+                <a href="#StreetFighterSlider"> What is Street Fighter?</a></li>
+            </div>
+            <div id="ContentRow" class="row">
+                <a name="center"> How did author come with it?</a></li>
+            </div>
+            <div id="ContentRow" class="row">
+                <a name="bottom"> Used technologies </a></li>
+            </div>
+            </ul>
+        </div>
+    <div class="card" id="ShowGameplay">
+        <p align="center">
+        <div class="carousel slide" data-bs-ride="carousel" id="StreetFighterSlider" data-bs-interval="1000000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://ychef.files.bbci.co.uk/1280x720/p0f5xncc.jpg" class="StreetFighterimg">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.nintendolife.com/55156a0c07e54/capcom-street-fighter.large.jpg" class="StreetFighterimg">
+                </div>
+            </div>
+            <div class="carousel-control-prev" role="button" data-bs-slide="prev" data-bs-target="#StreetFighterSlider">
+                <button class="btn btn-secondary" id="buttonLeftArrow" data-toggle="tooltip" data-placement="top" title="Left"> ◄ </button>
+            </div>
+            <div class="carousel-control-next" role="button" data-bs-slide="next" data-bs-target="#StreetFighterSlider">
+                <button class="btn btn-secondary" id="buttonRightArrow" data-toggle="tooltip" data-placement="top" title="Right"> ► </button>
+            </div>
+            <img src="Images/left.jpg" id="leftarrowShowGameplay" height="310">
+            <img src="Images/right.jpg" id="rightarrowShowGameplay" height="310">
+        </div>
+        <br>
+        <div class="card-body">
+            <h3 class="card-title">Gameplay</h5>
+            <h4 class="card-text">Here is the image of gameplay</h4>
+            <audio controls autoplay class="audioOpening">
+                <source src="Audios/hotline_miami_03. M.O.O.N - Paris.mp3">
+              Your browser does not support the audio element.
+            </audio>
+        </div>
+        </p>
+    </div>
+    <hr class="nongoth">
+    
+    <div class="tab">
+        <button class="tablinks" onclick="openFunc(event, 'MainMenu')">Main menu</button> 
+        <button class="tablinks" onclick="openFunc(event, 'Registration')">Registration</button>
+        <button class="tablinks" onclick="openFunc(event, 'AboutUs')">About Us</button>
+      </div>
+      <div id="MainMenu" class="tabcontent">
+        <h3>Main menu</h3>
+        <p>Overall information about the game</p>
+      </div>
+      
+      <div id="Registration" class="tabcontent">
+        <h3>Registration</h3>
+        <p>Regitration to the website</p>
+      </div>
+      
+      <div id="AboutUs" class="tabcontent">
+        <h3>About us</h3>
+        <p>Author's thoughts about the game</p>
+      </div>
+      <hr class="nongoth">
+    <div class="container">
+        <div class="todoList">
+            <div class="row">
+                <label id="row1text"> To understand what is Street Fighter </label>
+                <button class="rounded-pill" id="pill1" onclick="
+                if (document.getElementById('pill1').innerHTML == ' '){
+                    document.getElementById('pill1').innerHTML = '✓'
+                }
+                else {document.getElementById('pill1').innerHTML = ' '}
+                "> </button>
+            </div>
+            <div class="row">
+                <label id="row2text"> To registrate in the website </label>
+                <button class="rounded-pill" id="pill2" onclick="
+                if (document.getElementById('pill2').innerHTML == ' '){
+                    document.getElementById('pill2').innerHTML = '✓'
+                }
+                else {document.getElementById('pill2').innerHTML = ' '}
+                "> </button>
+            </div>
+            <div class="row">
+                <label id="row3text"> To look for author thoughts about the game </label>
+                <button class="rounded-pill" id="pill3" onclick=" 
+                if (document.getElementById('pill3').innerHTML == ' '){ //if button's content = ' '  
+                    document.getElementById('pill3').innerHTML = '✓' // switch it's value to ✓
+                }
+                else {document.getElementById('pill3').innerHTML = ' '} // else leave it empty
+                "> </button>
+            </div>
+        </div>
+    </div>
+    <hr class="nongoth">
+
+    <div class="alert alert-danger w-50 text-center" role="alert">
+        Go check new updates!
+    </div>
+    <ul class="list-group" align="center">
+        <li class="list-group-item" style="background-color: black;">
+        <table align="center">
+                <th>Browsers</th> 
+                <th>Chrome</th>
+                <th>Microsoft Edge</th>
+                <th>Opera</th>
+              </tr>
+              <tr>
+                <td><img src="https://www.freepnglogos.com/uploads/logo-internet-png/logo-internet-chemiphase-updated-website-goes-live-chemiphase-ltd-12.png" height="50" width="50"></td>
+                <td><img src="https://assets.stickpng.com/images/588525cd6f293bbfae451a37.png" height="35" width="35"></td>
+                <td><img src="https://www.logo.wine/a/logo/Microsoft_Edge/Microsoft_Edge-New-Logo.wine.svg" height="50" width="50"></td>
+                <td><img src="https://assets.stickpng.com/images/58481821cef1014c0b5e499f.png" height="35" width="35"></td>
+              </tr>
+        </table>
+        </li>
+        <li class="list-group-item" style="background-color: black;"> Contacts: 8-775-704-3755 </li>
+    </ul>
+    <script>
+        function openFunc(evt, Name) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(Name).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+        $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+</html>
