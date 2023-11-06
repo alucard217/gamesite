@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title> Street Fighter </title>
+    <link rel="icon" href="Images/logoFavicon.png">
+    <head>
+        <meta charset="UTF-8">
+        <h1 align="center" class="mainText">Game Drag and Drop</h1>
+        <hr class="goth">
+    </head>
+    <body>
+
+        <img class="container pentImg" src="Images/pentagram.jpg" id="pentImgID">
+            <label id="point1">P1</label>
+            <label id="point2">P2</label>
+            <label id="point3">P3</label>
+        </img>
+
+        <img src="Images/cultist.png" class="cultistObj" id="cultist1">
+        <img src="Images/cultist.png" class="cultistObj" id="cultist2">
+        <img src="Images/cultist.png" class="cultistObj" id="cultist3">
+        <div class="container-fluid">
+          <p class="glitch DragDropText" data-text="SAVE" id="Text1"> SAVE </p>
+          <p class="glitch DragDropText" data-text="THEM" id="Text2"> THEM </p>
+        </div>
+        <div id="contFl" class="container-fluid"></div>
+    </body>
+    <script>
+    document.ondragstart = () => false;
+    document.onmousedown = event => {
+      if (!event.target.classList.contains('cultistObj')) return;
+
+      var scrollHeight = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight );
+
+      target = event.target;
+      saveX = event.offsetX;
+      saveY = event.offsetY;
+
+      document.onmousemove = event => {
+        target.style.position = 'absolute';
+        target.style.top = event.pageY - saveY + 'px';
+        target.style.left = event.pageX - saveX + 'px';
+        check(event, target, scrollHeight);
+      }
+
+      document.onmouseup = event => {
+        if (document.getElementById("point1").offsetLeft - 80 <= document.getElementById("cultist1").offsetLeft && document.getElementById("cultist1").offsetLeft <= document.getElementById("point1").offsetLeft + 80 &&
+        document.getElementById("point1").offsetTop - 80 <= document.getElementById("cultist1").offsetTop && document.getElementById("cultist1").offsetTop <= document.getElementById("point1").offsetTop + 80 &&
+        document.getElementById("point2").offsetLeft - 80 <= document.getElementById("cultist2").offsetLeft && document.getElementById("cultist2").offsetLeft <= document.getElementById("point2").offsetLeft + 80 &&
+        document.getElementById("point2").offsetTop - 80 <= document.getElementById("cultist2").offsetTop && document.getElementById("cultist2").offsetTop <= document.getElementById("point2").offsetTop + 80 &&
+        document.getElementById("point3").offsetLeft - 80 <= document.getElementById("cultist3").offsetLeft && document.getElementById("cultist3").offsetLeft <= document.getElementById("point3").offsetLeft + 80 &&
+        document.getElementById("point3").offsetTop - 80 <= document.getElementById("cultist3").offsetTop && document.getElementById("cultist3").offsetTop <= document.getElementById("point3").offsetTop + 80 
+        ){
+            document.getElementById("pentImgID").className = "container pentImg rotation";
+        }
+        document.onmousemove = null;
+      }
+      if (document.getElementById("point1").offsetLeft - 80 <= document.getElementById("cultist1").offsetLeft && document.getElementById("cultist1").offsetLeft <= document.getElementById("point1").offsetLeft + 80 &&
+        document.getElementById("point1").offsetTop - 80 <= document.getElementById("cultist1").offsetTop && document.getElementById("cultist1").offsetTop <= document.getElementById("point1").offsetTop + 80 &&
+        document.getElementById("point2").offsetLeft - 80 <= document.getElementById("cultist2").offsetLeft && document.getElementById("cultist2").offsetLeft <= document.getElementById("point2").offsetLeft + 80 &&
+        document.getElementById("point2").offsetTop - 80 <= document.getElementById("cultist2").offsetTop && document.getElementById("cultist2").offsetTop <= document.getElementById("point2").offsetTop + 80 &&
+        document.getElementById("point3").offsetLeft - 80 <= document.getElementById("cultist3").offsetLeft && document.getElementById("cultist3").offsetLeft <= document.getElementById("point3").offsetLeft + 80 &&
+        document.getElementById("point3").offsetTop - 80 <= document.getElementById("cultist3").offsetTop && document.getElementById("cultist3").offsetTop <= document.getElementById("point3").offsetTop + 80 
+        ){
+            document.getElementById("pentImgID").className = "container pentImg rotation";
+        }
+    }
+
+    function check(event, target, scrollHeight){
+      if (event.pageX - saveX <= 0) target.style.left = 0;
+      if (event.pageY - saveY <=0) target.style.top = 0;
+      if (event.pageY + (target.clientHeight - saveY) >= scrollHeight) {
+        target.style.top = scrollHeight-target.clientHeight+'px';
+      }
+      if (event.pageX + (target.clientWidth - saveX) >= document.body.scrollWidth) target.style.left = document.body.scrollWidth - target.clientWidth+'px ';
+    }
+    </script>
+</html>

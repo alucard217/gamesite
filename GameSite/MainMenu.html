@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title> Street Fighter </title>
+    <link rel="icon" href="Images/logoFavicon.png">
+    <head>
+        <meta charset="UTF-8">
+        <h1 align="center" class="mainText">𓆩༒︎ Street Fighter ༒︎𓆪</h1>
+        <hr class="goth">
+        <div class="container-fluid">
+            <nav class="navbar-collapse">
+                <a class="nav-item" id="Reg" href="Registration.html" onmouseover="hover('Reg')" onmouseout="unhover('Reg')">Registration</a> 
+                <a class="nav-item" id="About" href="AboutUs.html" onmouseover="hover('About')" onmouseout="unhover('About')">About us</a> 
+                <a class="nav-item" id="Game" href="Game.html" onmouseover="hover('Game')" onmouseout="unhover('Game')">Game</a> 
+            </nav>
+        </div>
+        <hr class="nongoth">
+    </head>
+        
+<body>
+        <div class="container" id="ContentList">
+        <h3 align="left"> Content: </h3> 
+            <div id="ContentRow" class="row">
+                <h5 class="rotation">⛥</h5>
+                <a href="#StreetFighterSlider"> What is Street Fighter?</a></li>
+            </div>
+            <div id="ContentRow" class="row">
+                <h5 class="rotation">⛥</h5>
+                <a name="center"> How did author come with it?</a></li>
+            </div>
+            <div id="ContentRow" class="row">
+                <h5 class="rotation">⛥</h5>
+                <a name="bottom"> Used technologies </a></li>
+            </div>
+            </ul>
+        </div>
+    <div class="card" id="ShowGameplay">
+        <p align="center">
+        <div class="carousel slide" data-ride="carousel" id="StreetFighterSlider" data-interval="10000000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://ychef.files.bbci.co.uk/1280x720/p0f5xncc.jpg" class="StreetFighterimg">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.nintendolife.com/55156a0c07e54/capcom-street-fighter.large.jpg" class="StreetFighterimg">
+                </div>
+            </div>
+            <a class="carousel-control-prev" role="button" data-slide="prev" href="#StreetFighterSlider">
+                <button class="btn btn-secondary" id="buttonLeftArrow" data-toggle="tooltip" data-placement="left" title="Left"> ◄ </button>
+            </a>
+            <a class="carousel-control-next" role="button" data-slide="next" href="#StreetFighterSlider">
+                <button class="btn btn-secondary" id="buttonRightArrow" data-toggle="tooltip" data-placement="right" title="Right"> ► </button>
+            </a>
+            <img src="Images/left.jpg" id="leftarrowShowGameplay" height="310">
+            <img src="Images/right.jpg" id="rightarrowShowGameplay" height="310">
+        </div>
+        <br>
+        <div class="card-body">
+            <h3 class="card-title">Gameplay Demonstration</h5>
+            <div class="dropdown" id="dropdownGameplay">
+                <button id="dropbut" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Soundtracks
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <button class="dropdown-item" onclick="ParisPlay()">M.O.O.N - Paris</a>
+                    <button class="dropdown-item" onclick="NinjaInTheNightPlay()">Ninja in the night</a>
+                    <button class="dropdown-item" onclick="OldSenseiPlay()">Old Sensei</a>
+                </div>
+              </div>
+
+        </div>
+        </p>
+    </div>
+    <hr class="nongoth">
+    <ul class="list-group" align="center">
+        <li class="list-group-item" style="background-color: black;">
+        <table align="center">
+                <th>Browsers</th> 
+                <th>Chrome</th>
+                <th>Microsoft Edge</th>
+                <th>Opera</th>
+              </tr>
+              <tr>
+                <td><img src="https://www.freepnglogos.com/uploads/logo-internet-png/logo-internet-chemiphase-updated-website-goes-live-chemiphase-ltd-12.png" height="50" width="50"></td>
+                <td><img src="https://assets.stickpng.com/images/588525cd6f293bbfae451a37.png" height="35" width="35"></td>
+                <td><img src="https://www.logo.wine/a/logo/Microsoft_Edge/Microsoft_Edge-New-Logo.wine.svg" height="50" width="50"></td>
+                <td><img src="https://assets.stickpng.com/images/58481821cef1014c0b5e499f.png" height="35" width="35"></td>
+              </tr>
+        </table>
+        </li>
+        <li class="list-group-item" style="background-color: black;"> Contacts: 8-775-704-3755 </li>
+    </ul>
+
+    <div class="container" align="center" id="containerAnimation">
+        <div class="row">
+            <h1 class="elem" id="elemleft"> 𓆩 </h1>
+            <h1 class="elem" id="elemright"> 𓆪 </h1>
+        </div>
+        <div class="row">
+                <h5 class="pulse" id="christ">♱</h1>
+        </div>
+    </div>
+
+    <script>
+
+        function hover(id){
+            document.getElementById(id).style.textDecoration = 'none';
+            document.getElementById(id).style.color = 'white'
+            document.getElementById(id).style.textShadow = '0 0 10px #fff, 0 0 20px #fff, 0 0 30px white, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073';
+        }
+        function unhover(id){
+            document.getElementById(id).style.textShadow = '';
+            document.getElementById(id).style.color = 'gray'
+        }
+        var audio = new Audio();
+        function ParisPlay(){
+            audio.pause();
+            audio = new Audio("Audios/hotline_miami_03. M.O.O.N - Paris.mp3");
+            audio.play();
+            document.getElementById("dropbut").innerHTML = "M.O.O.N - Paris";
+            var v = document.querySelectorAll("button");
+            for (let i = 0; i < v.length; i++){
+                if (v[i].innerHTML == 'M.O.O.N - Paris'){
+                    v[i].style.color = "pink";
+                }
+            }
+        }
+        function NinjaInTheNightPlay(){
+            audio.pause();
+            audio = new Audio("Audios/07 - Ninja In The Night.mp3");
+            audio.play();
+            document.getElementById("dropbut").innerHTML = "Ninja In The Night";
+            var v = document.querySelectorAll("button");
+            for (let i = 0; i < v.length; i++){
+                if (v[i].innerHTML == 'Ninja In The Night'){
+                    v[i].style.color = "red";
+                }
+            }
+        }
+        function OldSenseiPlay(){
+            audio.pause();
+            audio = new Audio("Audios/15 - Old Sensei.mp3");
+            audio.play();
+            document.getElementById("dropbut").innerHTML = "Old Sensei";
+            var v = document.querySelectorAll("button");
+            for (let i = 0; i < v.length; i++){
+                if (v[i].innerHTML == 'Old Sensei'){
+                    v[i].style.color = "deeppink";
+                }
+            }
+        }
+        var v = document.querySelectorAll("button");
+        for (let i = 0; i < v.length; i++){
+        v[i].addEventListener("mouseover", function(){
+        v[i].style.cursor = "url('Cursors/CursorGet.png'), auto";
+        })
+        }
+        $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+</html>
