@@ -5,4 +5,3 @@ My gamesite I've done in uni. I ain't got no backend and everything there, was j
 ![3](sc3.png)
 ![4](sc4.png)
 ![5](sc5.png)
-![6](sc6.png)
